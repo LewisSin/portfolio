@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lewis Sinche's Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* CSS for smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Adjustments for target sections */
+        #about, #work, #contact {
+            padding-top: 50px; /* Offset for the fixed header */
+            scroll-margin-top: 50px; /* Offset for the fixed header */
+        }
+
+        /* Larger image for first project */
+        #work .project:first-child img {
+            transform: scale(1.2); /* Adjust the scale factor as needed */
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="name">Lewis Sinche</div>
+        <nav>
+            <ul>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#work">Work</a></li>
+                <li><a href="#contact">Contact Me</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="banner">
+        <blockquote class="quote">
+            "Aut inveniam viam aut faciam"
+        </blockquote>
+    </div>
+
+    <section id="about" class="about-section">
+        <div class="about-title">
+            <span class="about">About</span>
+            <span class="me">Me</span>
+        </div>
+        <div class="about-description">
+            <p>I'm Lewis Sinche, a passionate and dedicated individual with a love for technology and creative design.
+
+                Driven by curiosity, I am always on the hunt for the next challenge and constantly strive to push the boundaries of what is possible. My philosophy revolves around the belief that every problem has a solution; it just requires the right blend of creativity, persistence, and technical know-how.
+                
+                In my downtime, I enjoy exploring nature, and playing video games.</p>
+        </div>
+    </section>
+
+    <section id="work" class="work-section">
+        <div class="work-title">
+            <span class="Work">Work</span>
+        </div>
+        <div class="project" id="application1">
+            <a href="URL_OF_APPLICATION_1" target="_blank">
+                <img src="path_to_image_of_application_1.jpg" alt="Application 1">
+                <h3>Title of Application 1</h3>
+            </a>
+        </div>
+        <div class="project" id="application2">
+            <a href="URL_OF_APPLICATION_2" target="_blank">
+                <img src="path_to_image_of_application_2.jpg" alt="Application 2">
+                <h3>Title of Application 2</h3>
+            </a>
+        </div>
+        <!-- Add more projects as needed -->
+    </section>
+
+    <footer id="contact">
+        <!-- Contact information goes here -->
+    </footer>
+
+    <script>
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,140 @@
+body, h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Helvetica', sans-serif;
+}
+
+header {
+    background-color: #2E2E2E;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    position: relative;
+}
+
+header .name {
+    color: #2E2E2E;
+    font-size: 2em;
+    font-weight: bold;
+    padding: 5px 10px;
+    position: relative;
+    z-index: 2;
+}
+
+header .name::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100vw;
+    bottom: 0;
+    width: calc(100% + 100vw);
+    background-color: #20B2AA;
+    z-index: -1;
+}
+
+header nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+header nav ul li a {
+    color: #20B2AA;
+    text-decoration: underline;
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+    color: white;
+}
+
+.banner {
+    height: 200px;
+    width: 100%;
+    background-image: url('assets/background.jpg');
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.quote {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: #2E2E2E;
+    color: #20B2AA;
+    padding: 10px;
+    border-radius: 5px;
+    max-width: 300px;
+}
+
+.about-section {
+    display: flex;
+    align-items: stretch;
+    padding-left: 250px;
+    margin-bottom: 50px;
+}
+
+.about-title {
+    font-size: 3em;
+    line-height: 0.8;
+    border-right: 2px solid navy;
+    padding-right: 20px;
+    margin-right: 20px;
+    color: navy;
+}
+
+.about-description p {
+    font-size: 1.2em;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 250px;
+    color: navy;
+}
+
+.me {
+    margin-left: 60px;
+}
+
+.work-section {
+    display: flex;
+    align-items: stretch;
+    padding-left: calc(250px + 16px);
+    margin-bottom: 50px;
+}
+
+.work-title {
+    font-size: 3em;
+    line-height: 0.8;
+    border-right: 2px solid navy;
+    padding-right: 20px;
+    margin-right: 20px;
+    color: navy;
+    height: 100%;
+}
+
+.me {
+    margin-left: 60px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+#about, #work, #contact {
+    padding-top: 50px;
+    scroll-margin-top: 50px;
+}
+
+#work .project:first-child img {
+    transform: scale(1.2);
+}
